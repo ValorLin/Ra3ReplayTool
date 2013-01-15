@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>838</width>
+    <height>522</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>红色警戒3 录像工具</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/images/icon.png</normaloff>:/images/icon.png</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>16</width>
+    <height>16</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>1</horstretch>
+     <verstretch>1</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>5</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QListWidget" name="listWidget"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>838</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="action_A"/>
+   </widget>
+   <widget class="QMenu" name="menu_S">
+    <property name="title">
+     <string>设置(S&amp;)</string>
+    </property>
+   </widget>
+   <addaction name="menu_S"/>
+   <addaction name="menu_H"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>1</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>360</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>200</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>录像分类</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="leftMargin">
+      <number>3</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>3</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item row="2" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>5</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="inputMethodHints">
+          <set>Qt::ImhNone</set>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="echoMode">
+          <enum>QLineEdit::Normal</enum>
+         </property>
+         <property name="placeholderText">
+          <string>搜索</string>
+         </property>
+         <property name="cursorMoveStyle">
+          <enum>Qt::VisualMoveStyle</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>1</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>160</width>
+           <height>160</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>200</width>
+           <height>160</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>阵营</string>
+         </property>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>70</y>
+            <width>54</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:20pt;&quot;&gt;Vs&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+         </widget>
+         <widget class="QGroupBox" name="gbPlayer1">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>61</width>
+            <height>131</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QRadioButton" name="rbSoviet1">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/res/images/_8.gif</normaloff>:/res/images/_8.gif</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>21</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoRepeat">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbEmpire1">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/res/images/_2.gif</normaloff>:/res/images/_2.gif</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>21</width>
+             <height>18</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbAllied1">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/res/images/_4.gif</normaloff>:/res/images/_4.gif</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>21</width>
+             <height>18</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbRandom1">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>100</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/res/images/_7.gif</normaloff>:/res/images/_7.gif</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>21</width>
+             <height>18</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbNoFaction1">
+           <property name="geometry">
+            <rect>
+             <x>6</x>
+             <y>122</y>
+             <width>0</width>
+             <height>0</height>
+            </rect>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoRepeat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="gbPlayer2">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>20</y>
+            <width>61</width>
+            <height>131</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QRadioButton" name="rbSoviet2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/res/images/_8.gif</normaloff>:/res/images/_8.gif</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>21</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoRepeat">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbEmpire2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/res/images/_2.gif</normaloff>:/res/images/_2.gif</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>21</width>
+             <height>18</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbAllied2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/res/images/_4.gif</normaloff>:/res/images/_4.gif</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>21</width>
+             <height>18</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbRandom2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>100</y>
+             <width>41</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="res.qrc">
+             <normaloff>:/res/images/_7.gif</normaloff>:/res/images/_7.gif</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>21</width>
+             <height>18</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="rbNoFaction2">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>55</x>
+             <y>122</y>
+             <width>0</width>
+             <height>0</height>
+            </rect>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+           <property name="autoRepeat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="pbAllReps">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>120</y>
+            <width>31</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>全部</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolBox" name="toolBox">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="toolBoxPage1">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>192</width>
+            <height>219</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>             地图</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <property name="margin">
+            <number>0</number>
+           </property>
+           <property name="spacing">
+            <number>0</number>
+           </property>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="toolBoxPage2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>192</width>
+            <height>219</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>             玩家</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="action_A">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/images/icon.png</normaloff>:/res/images/icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>联系作者(&amp;A)</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

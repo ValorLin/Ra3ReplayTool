@@ -1,0 +1,42 @@
+<RCC>
+  <qresource prefix="res">
+    <file>images/_1.gif</file>
+    <file>images/_2.gif</file>
+    <file>images/_3.gif</file>
+    <file>images/_4.gif</file>
+    <file>images/_7.gif</file>
+    <file>images/_8.gif</file>
+    <file>images/_72.gif</file>
+    <file>images/_74.gif</file>
+    <file>images/_78.gif</file>
+    <file>images/icon.png</file>
+    <file>images/map_mp_2_black1b.jpg</file>
+    <file>images/map_mp_2_feasel1.jpg</file>
+    <file>images/map_mp_2_feasel2.jpg</file>
+    <file>images/map_mp_2_feasel3.jpg</file>
+    <file>images/map_mp_2_feasel4.jpg</file>
+    <file>images/map_mp_2_feasel5.jpg</file>
+    <file>images/map_mp_2_feasel6.jpg</file>
+    <file>images/map_mp_2_feasel7.jpg</file>
+    <file>images/map_mp_2_feasel8.jpg</file>
+    <file>images/map_mp_2_rao1.jpg</file>
+    <file>images/map_mp_3_feasel2.jpg</file>
+    <file>images/map_mp_3_feasel3.jpg</file>
+    <file>images/map_mp_3_feasel4.jpg</file>
+    <file>images/map_mp_4_black_xslice.jpg</file>
+    <file>images/map_mp_4_feasel1.jpg</file>
+    <file>images/map_mp_4_feasel2.jpg</file>
+    <file>images/map_mp_4_feasel3.jpg</file>
+    <file>images/map_mp_4_feasel5.jpg</file>
+    <file>images/map_mp_4_feasel6.jpg</file>
+    <file>images/map_mp_4_feasel7.jpg</file>
+    <file>images/map_mp_4_ssmith2_remix.jpg</file>
+    <file>images/map_mp_4_stewart_1.jpg</file>
+    <file>images/map_mp_5_feasel2.jpg</file>
+    <file>images/map_mp_5_feasel3.jpg</file>
+    <file>images/map_mp_6_feasel1.jpg</file>
+    <file>images/map_mp_6_feasel3.jpg</file>
+    <file>images/map_mp_6_feasel4.jpg</file>
+    <file>images/map_mp_6_ssmith2.jpg</file>
+  </qresource>
+</RCC>
