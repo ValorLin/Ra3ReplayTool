@@ -1,15 +1,15 @@
 <RCC>
   <qresource prefix="res">
-    <file>images/_1.gif</file>
-    <file>images/_2.gif</file>
-    <file>images/_3.gif</file>
-    <file>images/_4.gif</file>
-    <file>images/_7.gif</file>
-    <file>images/_8.gif</file>
-    <file>images/_72.gif</file>
-    <file>images/_74.gif</file>
-    <file>images/_78.gif</file>
     <file>images/icon.png</file>
+    <file>images/_a.gif</file>
+    <file>images/_e.gif</file>
+    <file>images/_mic.gif</file>
+    <file>images/_ob.gif</file>
+    <file>images/_r.gif</file>
+    <file>images/_ra.gif</file>
+    <file>images/_re.gif</file>
+    <file>images/_rs.gif</file>
+    <file>images/_s.gif</file>
     <file>images/map_mp_2_black1b.jpg</file>
     <file>images/map_mp_2_feasel1.jpg</file>
     <file>images/map_mp_2_feasel2.jpg</file>

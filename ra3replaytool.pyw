@@ -14,13 +14,14 @@ class Ra3ReplayToolWindow(QMainWindow):
     def __init__(self,parent=None):
         QWidget.__init__(self,parent)
         
-        self.faction1 = 'Soviet';
-        self.faction2 = 'Soviet';
+        self.faction1 = None
+        self.faction2 = None
         self.allReps = []
         
         self.ui = ui_main.Ui_MainWindow()
         self.ui.setupUi(self)
         self.loadReps()
+        print self.faction1, self.faction2
         self.show()
         
     def loadReps(self):        
@@ -32,9 +33,7 @@ class Ra3ReplayToolWindow(QMainWindow):
         tmpListItems = []
         self.ui.listWidget.clear()
         for rep in reps:
-            tmpListItems.append(QListWidgetItem(rep['filename']))
-        for i in range(len(tmpListItems)):
-            self.ui.listWidget.insertItem(i + 1, tmpListItems[i])
+            pass
 
     @QtCore.pyqtSlot()
     def on_rbSoviet1_clicked(self):
@@ -87,9 +86,9 @@ class Ra3ReplayToolWindow(QMainWindow):
         
     def filterByFactions(self):
         factions = []
-        if self.faction1:
+        if self.faction1 is not None:
             factions.append(self.faction1)
-        if self.faction2:
+        if self.faction2 is not None:
             factions.append(self.faction2)
         filteredReps = filter.byFactions(factions, self.allReps)
         self.showReps(filteredReps)
@@ -100,13 +99,4 @@ import ui_main
 app = QApplication(sys.argv)
 repToolWindow = Ra3ReplayToolWindow()
 sys.exit(app.exec_())
-
-
-def test():
-    reps = []
-    for file in path.getReplayFiles():
-        reps.append(decoder.decodeFile(file))
-    factions = ['Soviet', 'Soviet']
-    for rep in filter.byFactions(factions, reps):
-        print rep['filename']
         

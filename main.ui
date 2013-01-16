@@ -227,7 +227,7 @@
            </property>
            <property name="icon">
             <iconset resource="res.qrc">
-             <normaloff>:/res/images/_8.gif</normaloff>:/res/images/_8.gif</iconset>
+             <normaloff>:/res/images/_s.gif</normaloff>:/res/images/_s.gif</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -256,7 +256,7 @@
            </property>
            <property name="icon">
             <iconset resource="res.qrc">
-             <normaloff>:/res/images/_2.gif</normaloff>:/res/images/_2.gif</iconset>
+             <normaloff>:/res/images/_e.gif</normaloff>:/res/images/_e.gif</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -279,7 +279,7 @@
            </property>
            <property name="icon">
             <iconset resource="res.qrc">
-             <normaloff>:/res/images/_4.gif</normaloff>:/res/images/_4.gif</iconset>
+             <normaloff>:/res/images/_a.gif</normaloff>:/res/images/_a.gif</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -302,7 +302,7 @@
            </property>
            <property name="icon">
             <iconset resource="res.qrc">
-             <normaloff>:/res/images/_7.gif</normaloff>:/res/images/_7.gif</iconset>
+             <normaloff>:/res/images/_r.gif</normaloff>:/res/images/_r.gif</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -366,7 +366,7 @@
            </property>
            <property name="icon">
             <iconset resource="res.qrc">
-             <normaloff>:/res/images/_8.gif</normaloff>:/res/images/_8.gif</iconset>
+             <normaloff>:/res/images/_s.gif</normaloff>:/res/images/_s.gif</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -395,7 +395,7 @@
            </property>
            <property name="icon">
             <iconset resource="res.qrc">
-             <normaloff>:/res/images/_2.gif</normaloff>:/res/images/_2.gif</iconset>
+             <normaloff>:/res/images/_e.gif</normaloff>:/res/images/_e.gif</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -418,7 +418,7 @@
            </property>
            <property name="icon">
             <iconset resource="res.qrc">
-             <normaloff>:/res/images/_4.gif</normaloff>:/res/images/_4.gif</iconset>
+             <normaloff>:/res/images/_a.gif</normaloff>:/res/images/_a.gif</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -441,7 +441,7 @@
            </property>
            <property name="icon">
             <iconset resource="res.qrc">
-             <normaloff>:/res/images/_7.gif</normaloff>:/res/images/_7.gif</iconset>
+             <normaloff>:/res/images/_r.gif</normaloff>:/res/images/_r.gif</iconset>
            </property>
            <property name="iconSize">
             <size>

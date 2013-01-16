@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:/Users/weilao/_eric4/workspace/ra3replaytool/main.ui'
+# Form implementation generated from reading ui file 'C:/Users/weilao/GitHub/Ra3ReplayTool/main.ui'
 #
-# Created: Tue Jan 15 03:02:42 2013
+# Created: Wed Jan 16 20:36:38 2013
 #      by: PyQt4 UI code generator 4.9.6
 #
 # WARNING! All changes made in this file will be lost!
@@ -107,7 +107,7 @@ class Ui_MainWindow(object):
         self.rbSoviet1.setGeometry(QtCore.QRect(10, 10, 41, 16))
         self.rbSoviet1.setText(_fromUtf8(""))
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(_fromUtf8(":/res/images/_8.gif")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(_fromUtf8(":/res/images/_s.gif")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.rbSoviet1.setIcon(icon1)
         self.rbSoviet1.setIconSize(QtCore.QSize(21, 18))
         self.rbSoviet1.setChecked(False)
@@ -117,7 +117,7 @@ class Ui_MainWindow(object):
         self.rbEmpire1.setGeometry(QtCore.QRect(10, 70, 41, 16))
         self.rbEmpire1.setText(_fromUtf8(""))
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/res/images/_2.gif")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/res/images/_e.gif")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.rbEmpire1.setIcon(icon2)
         self.rbEmpire1.setIconSize(QtCore.QSize(21, 18))
         self.rbEmpire1.setObjectName(_fromUtf8("rbEmpire1"))
@@ -125,7 +125,7 @@ class Ui_MainWindow(object):
         self.rbAllied1.setGeometry(QtCore.QRect(10, 40, 41, 16))
         self.rbAllied1.setText(_fromUtf8(""))
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(_fromUtf8(":/res/images/_4.gif")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(_fromUtf8(":/res/images/_a.gif")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.rbAllied1.setIcon(icon3)
         self.rbAllied1.setIconSize(QtCore.QSize(21, 18))
         self.rbAllied1.setObjectName(_fromUtf8("rbAllied1"))
@@ -133,7 +133,7 @@ class Ui_MainWindow(object):
         self.rbRandom1.setGeometry(QtCore.QRect(10, 100, 41, 16))
         self.rbRandom1.setText(_fromUtf8(""))
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(_fromUtf8(":/res/images/_7.gif")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(_fromUtf8(":/res/images/_r.gif")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.rbRandom1.setIcon(icon4)
         self.rbRandom1.setIconSize(QtCore.QSize(21, 18))
         self.rbRandom1.setObjectName(_fromUtf8("rbRandom1"))

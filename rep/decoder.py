@@ -13,11 +13,15 @@ def decode(fileName, replayRawData):
     replayInfoTmp = __simpleDecode(replayRawData)
     #已经获得初步解析结果，但初步解析后数
     #值的意义还不明确，需进行进一步解析。
+    
+    players = __decodeAllPalyers(replayInfoTmp)
+    map = __decodeMap(replayInfoTmp)
     return {
+        'name'     :  __generatorRepName(players, map),
         'filename' :  fileName,
-        'map'      :  __decodeMap(replayInfoTmp),
+        'map'      :  map,
         'rules'    :  __decodeRules(replayInfoTmp),  
-        'players'  :  __decodeAllPalyers(replayInfoTmp)
+        'players'  :  players
         }
 
 #初步解析
@@ -30,6 +34,17 @@ def __simpleDecode(replayRawData):
             value = infoArray[1]
             result[key] = value #获得key->value格式的数据
     return result
+
+#生成回放名称
+def __generatorRepName(players, map):
+    repName = '';
+    for player in players:
+        if player['faction'] not in ['Observer', 'Commentator']:
+            repName += player['name'] + '(' + player['faction'][0] +')'+ ' VS '
+    repName = repName.rstrip(' S').rstrip('V')
+    repName += map['name']
+    return repName
+    
     
 #批量解析玩家
 def __decodeAllPalyers(replayInfo):
