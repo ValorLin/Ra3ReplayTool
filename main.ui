@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>838</width>
+    <width>569</width>
     <height>522</height>
    </rect>
   </property>
@@ -50,7 +50,23 @@
      <number>0</number>
     </property>
     <item row="0" column="0">
-     <widget class="QListWidget" name="listWidget"/>
+     <widget class="QListWidget" name="lwReplays">
+      <property name="cursor" stdset="0">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::EditKeyPressed</set>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>true</bool>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>32</width>
+        <height>32</height>
+       </size>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -59,7 +75,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>838</width>
+     <width>569</width>
      <height>19</height>
     </rect>
    </property>
@@ -222,6 +238,12 @@
              <height>16</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -235,12 +257,6 @@
              <height>18</height>
             </size>
            </property>
-           <property name="checked">
-            <bool>false</bool>
-           </property>
-           <property name="autoRepeat">
-            <bool>false</bool>
-           </property>
           </widget>
           <widget class="QRadioButton" name="rbEmpire1">
            <property name="geometry">
@@ -250,6 +266,9 @@
              <width>41</width>
              <height>16</height>
             </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
            </property>
            <property name="text">
             <string/>
@@ -274,6 +293,9 @@
              <height>16</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -297,6 +319,9 @@
              <height>16</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -314,17 +339,11 @@
           <widget class="QRadioButton" name="rbNoFaction1">
            <property name="geometry">
             <rect>
-             <x>6</x>
-             <y>122</y>
-             <width>0</width>
-             <height>0</height>
+             <x>8</x>
+             <y>142</y>
+             <width>21</width>
+             <height>21</height>
             </rect>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
            </property>
            <property name="text">
             <string/>
@@ -361,6 +380,9 @@
              <height>16</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -374,12 +396,6 @@
              <height>18</height>
             </size>
            </property>
-           <property name="checked">
-            <bool>false</bool>
-           </property>
-           <property name="autoRepeat">
-            <bool>false</bool>
-           </property>
           </widget>
           <widget class="QRadioButton" name="rbEmpire2">
            <property name="geometry">
@@ -389,6 +405,9 @@
              <width>41</width>
              <height>16</height>
             </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
            </property>
            <property name="text">
             <string/>
@@ -413,6 +432,9 @@
              <height>16</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -436,6 +458,9 @@
              <height>16</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -456,23 +481,11 @@
            </property>
            <property name="geometry">
             <rect>
-             <x>55</x>
-             <y>122</y>
-             <width>0</width>
-             <height>0</height>
+             <x>30</x>
+             <y>140</y>
+             <width>16</width>
+             <height>21</height>
             </rect>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
            </property>
            <property name="text">
             <string/>

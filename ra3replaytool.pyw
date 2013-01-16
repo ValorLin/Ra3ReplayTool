@@ -10,6 +10,9 @@ from rep import decoder
 from rep import filter
 import path
 
+import ui_main
+import res_rc
+
 class Ra3ReplayToolWindow(QMainWindow):
     def __init__(self,parent=None):
         QWidget.__init__(self,parent)
@@ -21,7 +24,7 @@ class Ra3ReplayToolWindow(QMainWindow):
         self.ui = ui_main.Ui_MainWindow()
         self.ui.setupUi(self)
         self.loadReps()
-        print self.faction1, self.faction2
+        print self.ui.lwReplays.currentRow()
         self.show()
         
     def loadReps(self):        
@@ -31,14 +34,22 @@ class Ra3ReplayToolWindow(QMainWindow):
 
     def showReps(self, reps):
         tmpListItems = []
-        self.ui.listWidget.clear()
+        self.ui.lwReplays.clear()
         for rep in reps:
-            pass
+            icon = QIcon(':res/images/' + rep['map']['image'])
+            qstinglistmodel = QStringListModel([rep['name'],rep['filename']])
+            listItem = QListWidgetItem(icon, rep['name'], self.ui.lwReplays)
 
+    @QtCore.pyqtSlot()
+    def on_lwReplays_itemDoubleClicked(self, item):
+        print 'good'
+        self.hide()
+        
     @QtCore.pyqtSlot()
     def on_rbSoviet1_clicked(self):
         self.faction1 = 'Soviet';
         self.filterByFactions();
+        print 'good'
         
     @QtCore.pyqtSlot()
     def on_rbSoviet2_clicked(self):
@@ -94,8 +105,6 @@ class Ra3ReplayToolWindow(QMainWindow):
         self.showReps(filteredReps)
         print self.faction1, self.faction2
         
-import ui_main
-
 app = QApplication(sys.argv)
 repToolWindow = Ra3ReplayToolWindow()
 sys.exit(app.exec_())

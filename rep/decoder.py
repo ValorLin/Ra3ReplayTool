@@ -42,7 +42,7 @@ def __generatorRepName(players, map):
         if player['faction'] not in ['Observer', 'Commentator']:
             repName += player['name'] + '(' + player['faction'][0] +')'+ ' VS '
     repName = repName.rstrip(' S').rstrip('V')
-    repName += map['name']
+    repName += '\r\n' + map['name']
     return repName
     
     
@@ -58,9 +58,29 @@ def __decodeAllPalyers(replayInfo):
 #解析一个玩家
 def __decodePlayer(player):
     #数字对应的阵营意义
-    factions = ['None', 'Observer', 'Empire', 'Commentator', 'Allied', 'None', 'None', 'Random', 'Soviet', 'None']
+    factions = [
+        'None',
+        'Observer',
+        'Empire',
+        'Commentator',
+        'Allied',
+        'None',
+        'None',
+        'Random',
+        'Soviet',
+        'None'
+    ]
     #数字对应的颜色意义
-    colors = ['Blue', 'Yellow', 'Green', 'Orange', 'Purple', 'Red', 'Cyan', 'Random']
+    colors = [
+        'Blue', 
+        'Yellow',
+        'Green', 
+        'Orange', 
+        'Purple', 
+        'Red', 
+        'Cyan', 
+        'Random'
+    ]
     playerTmp = player.lstrip("H").rstrip(",").split(',')
     return {
         'name' : playerTmp[0],
@@ -70,11 +90,42 @@ def __decodePlayer(player):
 
 #解析地图
 def __decodeMap(mapInfo):
+    #地图对应的地图名
+    maps = {
+        'map_mp_2_black1b'      : '原始神庙-TP',
+        'map_mp_2_feasel1'      : '卡巴那共和国-CR',
+        'map_mp_2_feasel2'      : '血流成河',
+        'map_mp_2_feasel3'      : '秘密圣地',
+        'map_mp_2_feasel4'      : '战斗实验平台-BB',
+        'map_mp_2_feasel5'      : '雪梨-SP',
+        'map_mp_2_feasel6'      : '工业区-IS',
+        'map_mp_2_feasel7'      : '休闲聚会-',
+        'map_mp_2_feasel8'      : '火山岛-FI',
+        'map_mp_2_rao1'         : '无限岛-II',
+        'map_mp_3_feasel2'      : '混乱火山湖',
+        'map_mp_3_feasel3'      : '隐藏要塞',
+        'map_mp_3_feasel4'      : '火山断层',
+        'map_mp_4_black_xslice' : '敌对旅馆-HH',
+        'map_mp_4_feasel1'      : '圆屋',
+        'map_mp_4_feasel2'      : '岩石岭',
+        'map_mp_4_feasel3'      : '疯狂暗礁',
+        'map_mp_4_feasel5'      : '八角作战基地',
+        'map_mp_4_feasel6'      : '池塘聚会-PP',
+        'map_mp_4_feasel7'      : '交火圈-FR',#FR？
+        'map_mp_4_ssmith2_remix': '死亡水域',
+        'map_mp_4_stewart_1'    : '严寒对决',
+        'map_mp_5_feasel2'      : '山顶杀戮',
+        'map_mp_5_feasel3'      : '大型竞技场',
+        'map_mp_6_feasel1'      : '殆尽的天堂',
+        'map_mp_6_feasel3'      : '零下时刻-SZ',
+        'map_mp_6_feasel4'      : '麦格马格登',
+        'map_mp_6_ssmith2'      : '卡维利'
+    }
     mapName = re.sub(r'(\d)*data/maps/official/', '', mapInfo['M'])
     return {
-        'name' : mapName,
+        'name' : maps[mapName].decode('utf-8'),
         'place_num': mapName.replace('map_mp_', '')[0],
-        'image': 'images/' + mapName + '.jpg'
+        'image': mapName + '.jpg'
         }
 
 #解析游戏规则

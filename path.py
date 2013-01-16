@@ -8,6 +8,11 @@ def getSysPath(key):
     #key = Personal我的文档,其他的请自行打开注册列表查看。
     path = _winreg.OpenKey(_winreg.HKEY_CURRENT_USER, r'Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders',)
     return _winreg.QueryValueEx(path, key)[0]
+    
+#获取ra3目录
+def getRa3Path():
+    path = _winreg.OpenKey(_winreg.HKEY_LOCAL_MACHINE, r'Software\Electronic Arts\Electronic Arts\Red Alert 3',)
+    return _winreg.QueryValueEx(path, 'Install Dir')[0]
 
 #获取目录下的所有录像文件
 def getFiles(path):
