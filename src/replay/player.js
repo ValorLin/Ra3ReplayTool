@@ -4,6 +4,7 @@
  * Time: 上午10:22
  */
 define(['underscore', 'util', 'faction', 'clan'], function (_, util, Faction, Clan) {
+
     var Player = function (strPlayer) {
         var tmp, rawName;
 
@@ -64,8 +65,8 @@ define(['underscore', 'util', 'faction', 'clan'], function (_, util, Faction, Cl
                 return "困难的电脑";
             case "B": // Brutal
                 return "凶残的电脑";
-            default:
-                return "这不可能吧。。。录像坏了？";
+            default: // 不知道
+                return "电脑";
         }
     };
 
@@ -84,10 +85,12 @@ define(['underscore', 'util', 'faction', 'clan'], function (_, util, Faction, Cl
 
             if (rawPlayer.split(',').length > 1) {
                 player = new Player(rawPlayer);
+
             } else {
                 //卧槽，有人ID里竟然包含冒号。
                 player = new Player(rawPlayer + ":" + rawPlayers[i + 1]);
             }
+
             players.push(player);
         });
 

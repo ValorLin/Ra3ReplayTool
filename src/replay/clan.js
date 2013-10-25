@@ -4,6 +4,17 @@
  * Time: 下午7:51
  */
 define(['underscore'], function (_) {
+
+    var Clan = function (playerName) {
+        var tmpClan;
+
+        tmpClan = findClan(playerName);
+        if (!tmpClan) return;
+
+        this.shortName = tmpClan.shortName;
+        this.name = tmpClan.name;
+    };
+
     var CLAN_LIST = [
         {
             shortName: 'CCZD',
@@ -23,16 +34,6 @@ define(['underscore'], function (_) {
         return _.find(CLAN_LIST, function (clan) {
             return playerName.indexOf(clan.shortName) > -1;
         });
-    };
-
-    var Clan = function (playerName) {
-        var tmpClan;
-
-        tmpClan = findClan(playerName);
-        if (!tmpClan) return;
-
-        this.shortName = tmpClan.shortName;
-        this.name = tmpClan.name;
     };
 
     return Clan;

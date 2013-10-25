@@ -1,7 +1,7 @@
 Ra3ReplayTool
 =============
 
-An javascript libray for decode *Command & Conquer: Red Alert 3* game replay.
+An javascript library for decode *Command & Conquer: Red Alert 3* game replay.
 
 Example Usage
 -------------------------------------------------------------------------------------

@@ -4,7 +4,9 @@
  * Time: 下午1:27
  */
 define(['underscore'], function (_) {
+
     return {
+
         str2bytes: function (str) {
             return  _.invoke(str.split(''), 'charCodeAt', 0);
         },
@@ -17,32 +19,31 @@ define(['underscore'], function (_) {
         },
 
         getInt32At: function (str, i) {
-            var bytes;
-            bytes = this.str2bytes(str.slice(i, i + 4));
+            var bytes = this.str2bytes(str.slice(i, i + 4));
             return this.bytes2int32(bytes);
         },
 
-        ascii2utf8: function (utftext) {
+        ascii2utf8: function (asciiText) {
             var i, c, c2, c3, string;
             i = c = c2 = c3 = 0;
             string = "";
 
-            while (i < utftext.length) {
+            while (i < asciiText.length) {
 
-                c = utftext.charCodeAt(i);
+                c = asciiText.charCodeAt(i);
 
                 if (c < 128) {
                     string += String.fromCharCode(c);
                     i++;
-                }
-                else if ((c > 191) && (c < 224)) {
-                    c2 = utftext.charCodeAt(i + 1);
+
+                } else if ((c > 191) && (c < 224)) {
+                    c2 = asciiText.charCodeAt(i + 1);
                     string += String.fromCharCode(((c & 31) << 6) | (c2 & 63));
                     i += 2;
-                }
-                else {
-                    c2 = utftext.charCodeAt(i + 1);
-                    c3 = utftext.charCodeAt(i + 2);
+
+                } else {
+                    c2 = asciiText.charCodeAt(i + 1);
+                    c3 = asciiText.charCodeAt(i + 2);
                     string += String.fromCharCode(((c & 15) << 12) | ((c2 & 63) << 6) | (c3 & 63));
                     i += 3;
                 }

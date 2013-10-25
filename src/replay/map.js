@@ -4,7 +4,16 @@
  * Time: 上午9:54
  */
 define(['underscore'], function (_) {
-    var CLEAN_REGEXP = new RegExp('^.*data/maps/official/');
+
+    var Map = function (strMap) {
+        var key = strMap.replace(USELESS_STR_REGEXP, '');
+
+        this.name = MAPS_NAME[key];
+        this.image = key + '.jpg';
+        this.playerNum = key.replace('map_mp_', '')[0];
+    };
+
+    var USELESS_STR_REGEXP = new RegExp('^.*data/maps/official/');
     var MAPS_NAME = {
         "map_mp_2_black1b": "原始神庙-TP",
         "map_mp_2_feasel1": "卡巴那共和国-CR",
@@ -38,11 +47,5 @@ define(['underscore'], function (_) {
         "081data/maps/internal/1v1_pool_party_made_by_maniek": "池塘派对1v1版"
     };
 
-    return function (strMap) {
-        var key = strMap.replace(CLEAN_REGEXP, '');
-
-        this.name = MAPS_NAME[key];
-        this.image = key + '.jpg';
-        this.playerNum = key.replace('map_mp_', '')[0];
-    };
+    return Map;
 });
